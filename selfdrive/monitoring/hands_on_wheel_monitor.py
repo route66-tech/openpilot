@@ -11,9 +11,9 @@ if not travis:
 else:	
   awareness_factor = 1
   
-_PRE_ALERT_THRESHOLD = 150 + awareness_factor * 600  # 15s
-_PROMPT_ALERT_THRESHOLD = 300 + awareness_factor * 600 # 30s
-_TERMINAL_ALERT_THRESHOLD = 600 + awareness_factor * 600  # 60s
+_PRE_ALERT_THRESHOLD = 90000 + awareness_factor * 200000# 15s
+_PROMPT_ALERT_THRESHOLD = 90000 + awareness_factor * 200000# 30s
+_TERMINAL_ALERT_THRESHOLD = 90000 + awareness_factor * 200000  # 60s
 
 _MIN_MONITORING_SPEED = 10 * CV.KPH_TO_MS  # No monitoring underd 10kph
 
