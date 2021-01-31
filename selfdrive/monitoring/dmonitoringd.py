@@ -35,7 +35,7 @@ def dmonitoringd_thread(sm=None, pm=None):
   sm['liveCalibration'].calStatus = Calibration.INVALID
   sm['carState'].vEgo = 0.
   sm['carState'].cruiseState.enabled = False
-  sm['carState'].cruiseState.speed = 0.
+  sm['carState'].cruiseState.speed = 280.
   sm['carState'].buttonEvents = []
   sm['carState'].steeringPressed = False
   sm['carState'].standstill = True
