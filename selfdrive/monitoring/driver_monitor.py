@@ -14,12 +14,12 @@ if not travis:
 else:
   awareness_factor = 1
 
-_AWARENESS_TIME = 90000. * awareness_factor  # 1.6 minutes limit without user touching steering wheels make the car enter a terminal status
-_AWARENESS_PRE_TIME_TILL_TERMINAL = 90000. * awareness_factor # a first alert is issued 25s before expiration
-_AWARENESS_PROMPT_TIME_TILL_TERMINAL = 900006. * awareness_factor  # a second alert is issued 15s before start decelerating the car
-_DISTRACTED_TIME = 90000. * awareness_factor
-_DISTRACTED_PRE_TIME_TILL_TERMINAL = 90000. * awareness_factor
-_DISTRACTED_PROMPT_TIME_TILL_TERMINAL = 90000. * awareness_factor
+#_AWARENESS_TIME = 90000. * awareness_factor  # 1.6 minutes limit without user touching steering wheels make the car enter a terminal status
+#_AWARENESS_PRE_TIME_TILL_TERMINAL = 90000. * awareness_factor # a first alert is issued 25s before expiration
+#_AWARENESS_PROMPT_TIME_TILL_TERMINAL = 900006. * awareness_factor  # a second alert is issued 15s before start decelerating the car
+#_DISTRACTED_TIME = 90000. * awareness_factor
+#_DISTRACTED_PRE_TIME_TILL_TERMINAL = 90000. * awareness_factor
+#_DISTRACTED_PROMPT_TIME_TILL_TERMINAL = 90000. * awareness_factor
 
 _FACE_THRESHOLD = 0.4
 _EYE_THRESHOLD = 0.6
@@ -38,7 +38,7 @@ _YAW_NATURAL_OFFSET = 0.08  # people don't seem to look straight when they drive
 _HI_STD_TIMEOUT = 5
 _HI_STD_FALLBACK_TIME = 10  # fall back to wheel touch if model is uncertain for a long time
 _DISTRACTED_FILTER_TS = 0.25  # 0.6Hz
-_POSE_CALIB_MIN_SPEED = 13  # 30 mph
+_POSE_CALIB_MIN_SPEED = 0  # 0 mph
 _POSE_OFFSET_MIN_COUNT = 600  # valid data counts before calibration completes, 1 seg is 600 counts
 _POSE_OFFSET_MAX_COUNT = 3600  # stop deweighting new data after 6 min, aka "short term memory"
 _RECOVERY_FACTOR_MAX = 5.  # relative to minus step change
