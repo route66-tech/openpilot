@@ -266,8 +266,8 @@ class CarInterface(CarInterfaceBase):
       events.append(create_event('wrongGear', [ET.NO_ENTRY, ET.USER_DISABLE]))
     if ret.doorOpen:
       events.append(create_event('doorOpen', [ET.NO_ENTRY, ET.SOFT_DISABLE]))
-    if ret.seatbeltUnlatched:
-      events.append(create_event('seatbeltNotLatched', [ET.NO_ENTRY, ET.SOFT_DISABLE]))
+    #if ret.seatbeltUnlatched:
+    #  events.append(create_event('seatbeltNotLatched', [ET.NO_ENTRY, ET.SOFT_DISABLE]))
     if ret.espDisabled:
       events.append(create_event('espDisabled', [ET.NO_ENTRY, ET.SOFT_DISABLE]))
     if not ret.cruiseState.available:
