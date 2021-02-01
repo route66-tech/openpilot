@@ -116,7 +116,7 @@ class CarController():
                         self.lkas_button_on)
 
     clu11_speed = CS.clu11["CF_Clu_Vanz"]
-    enabled_speed = 38 if CS.is_set_speed_in_mph  else 60
+    enabled_speed = 0 if CS.is_set_speed_in_mph  else 140
     if clu11_speed > enabled_speed or not lkas_active:
       enabled_speed = clu11_speed
 
