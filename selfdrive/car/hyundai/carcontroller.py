@@ -68,7 +68,7 @@ class CarController():
     self.last_lead_distance = 0
     self.turning_signal_timer = 0
     self.lkas_button_on = True
-    self.longcontrol = False #TODO: make auto
+    self.longcontrol = True #TODO: make auto
 
   def update(self, enabled, CS, frame, actuators, pcm_cancel_cmd, visual_alert,
              left_lane, right_lane, left_lane_depart, right_lane_depart):
@@ -94,7 +94,7 @@ class CarController():
     if CS.out.vEgo < 16.7 and self.car_fingerprint == CAR.HYUNDAI_GENESIS and not CS.mdps_bus:
       lkas_active = 0
 
-    # Disable steering while turning blinker on and speed below 60 kph
+    # Disable steering while turning blinker on and speed below 0 kph
     if CS.out.leftBlinker or CS.out.rightBlinker:
       if self.car_fingerprint not in [CAR.KIA_OPTIMA, CAR.KIA_OPTIMA_H]:
         self.turning_signal_timer = 100  # Disable for 1.0 Seconds after blinker turned off
