@@ -110,7 +110,7 @@ class DriverStatus():
     self.terminal_alert_cnt = 0
     self.terminal_time = 0
     self.step_change = 0.
-    self.active_monitoring_mode = True
+    self.active_monitoring_mode = False
     self.hi_stds = 0
     self.threshold_prompt = _DISTRACTED_PROMPT_TIME_TILL_TERMINAL / _DISTRACTED_TIME
 
