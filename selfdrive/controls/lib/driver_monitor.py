@@ -138,7 +138,7 @@ class DriverStatus():
       self.threshold_pre = _DISTRACTED_PRE_TIME_TILL_TERMINAL / _DISTRACTED_TIME
       self.threshold_prompt = _DISTRACTED_PROMPT_TIME_TILL_TERMINAL / _DISTRACTED_TIME
       self.step_change = DT_DMON / _DISTRACTED_TIME
-      self.active_monitoring_mode = True
+      self.active_monitoring_mode = False
     else:
       if self.active_monitoring_mode:
         self.awareness_active = self.awareness
