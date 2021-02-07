@@ -40,7 +40,7 @@ car_interaction_DETECTED = True
 car_interaction_NOT_DETECTED = False
 
 # openpilot state
-openpilot_ENGAGED = False
+openpilot_ENGAGED = True
 openpilot_NOT_ENGAGED = False
 
 # car standstill state
