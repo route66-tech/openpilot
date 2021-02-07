@@ -88,13 +88,13 @@ class CarController():
 
     # disable if steer angle reach 90 deg, otherwise mdps fault in some models
     # temporarily disable steering when LKAS button off 
-    lkas_active = enabled and abs(CS.out.steeringAngle) < 120. and self.lkas_button_on
+    lkas_active = enabled and abs(CS.out.steeringAngle) < 90. and self.lkas_button_on
 
     # fix for Genesis hard fault at low speed
     if CS.out.vEgo < 16.7 and self.car_fingerprint == CAR.HYUNDAI_GENESIS and not CS.mdps_bus:
       lkas_active = 0
 
-    # Disable steering while turning blinker on and speed below 0 kph
+    # Disable steering while turning blinker on and speed below 60 kph
     if CS.out.leftBlinker or CS.out.rightBlinker:
       if self.car_fingerprint not in [CAR.KIA_OPTIMA, CAR.KIA_OPTIMA_H]:
         self.turning_signal_timer = 100  # Disable for 1.0 Seconds after blinker turned off
@@ -116,7 +116,7 @@ class CarController():
                         self.lkas_button_on)
 
     clu11_speed = CS.clu11["CF_Clu_Vanz"]
-    enabled_speed = 0 if CS.is_set_speed_in_mph  else 140
+    enabled_speed = 38 if CS.is_set_speed_in_mph  else 60
     if clu11_speed > enabled_speed or not lkas_active:
       enabled_speed = clu11_speed
 
