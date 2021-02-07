@@ -123,7 +123,7 @@ def data_sample(CI, CC, sm, can_sock, state, mismatch_counter, can_error_counter
     else:
       events.append(create_event('calibrationInvalid', [ET.NO_ENTRY, ET.SOFT_DISABLE]))
 
-  if CS.vEgo > 92 * CV.MPH_TO_MS:
+  if CS.vEgo > 160 * CV.MPH_TO_MS:
     events.append(create_event('speedTooHigh', [ET.NO_ENTRY, ET.SOFT_DISABLE]))
 
   # When the panda and controlsd do not agree on controls_allowed
