@@ -32,8 +32,8 @@ _PITCH_POS_ALLOWANCE = 0.12 # rad, to not be too sensitive on positive pitch
 _PITCH_NATURAL_OFFSET = 0.02 # people don't seem to look straight when they drive relaxed, rather a bit up
 _YAW_NATURAL_OFFSET = 0.08 # people don't seem to look straight when they drive relaxed, rather a bit to the right (center of car)
 
-_HI_STD_TIMEOUT = 700
-_HI_STD_FALLBACK_TIME = 10 # fall back to wheel touch if model is uncertain for a long time
+_HI_STD_TIMEOUT = 4800
+_HI_STD_FALLBACK_TIME = 4800 # fall back to wheel touch if model is uncertain for a long time
 _DISTRACTED_FILTER_TS = 0.25  # 0.6Hz
 
 _POSE_CALIB_MIN_SPEED = 13 # 30 mph
