@@ -28,7 +28,7 @@ class CarInterface(CarInterfaceBase):
     # Hyundai port is a community feature for now
     ret.communityFeature = True
 
-    ret.steerActuatorDelay = 0.1  # Default delay
+    ret.steerActuatorDelay = 0  # Default delay
     ret.steerRateCost = 0.5
     ret.steerLimitTimer = 0.8
     tire_stiffness_factor = 1.
@@ -85,7 +85,7 @@ class CarInterface(CarInterfaceBase):
       ret.wheelbase = 3.15
       ret.steerRatio = 16.5
       ret.lateralTuning.pid.kiBP, ret.lateralTuning.pid.kpBP = [[0.], [0.]]
-      ret.lateralTuning.pid.kpV, ret.lateralTuning.pid.kiV = [[0.18], [0.04]]
+      ret.lateralTuning.pid.kpV, ret.lateralTuning.pid.kiV = [[0.19], [0.07]]
     elif candidate in [CAR.KIA_OPTIMA, CAR.KIA_OPTIMA_H]:
       ret.lateralTuning.pid.kf = 0.00005
       ret.mass = 3558. * CV.LB_TO_KG
