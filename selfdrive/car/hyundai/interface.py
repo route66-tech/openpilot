@@ -30,7 +30,7 @@ class CarInterface(CarInterfaceBase):
 
     ret.steerActuatorDelay = 0  # Default delay
     ret.steerRateCost = 0.5
-    ret.steerLimitTimer = 0.8
+    ret.steerLimitTimer = 10.0
     tire_stiffness_factor = 1.
 
     if candidate in [CAR.SANTA_FE, CAR.SANTA_FE_1]:
@@ -84,8 +84,8 @@ class CarInterface(CarInterfaceBase):
       ret.mass = 2060
       ret.wheelbase = 3.15
       ret.steerRatio = 16.5
-      ret.lateralTuning.pid.kiBP, ret.lateralTuning.pid.kpBP = [[2.0], [1.0]]
-      ret.lateralTuning.pid.kpV, ret.lateralTuning.pid.kiV = [[0.20], [0.03]]
+      ret.lateralTuning.pid.kiBP, ret.lateralTuning.pid.kpBP = [[4.0], [2.0]]
+      ret.lateralTuning.pid.kpV, ret.lateralTuning.pid.kiV = [[0.40], [0.03]]
     elif candidate in [CAR.KIA_OPTIMA, CAR.KIA_OPTIMA_H]:
       ret.lateralTuning.pid.kf = 0.00005
       ret.mass = 3558. * CV.LB_TO_KG
